@@ -1,0 +1,16 @@
+{
+	"name": "EmailSummarizer",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:0-7.0",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-dotnettools.csdevkit"
+			]
+		}
+	},
+	"mounts": [
+        "source=${localEnv:HOME}/Code/EmailSummarizer/Logs,target=/workspaces/Logs,type=bind",
+        "source=${localEnv:HOME}/Code/EmailSummarizer/Data,target=/workspaces/Data,type=bind",
+    ]
+}
