@@ -1,0 +1,73 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Build EmailSummarizer.Console",
+		"type": "shell",
+		"command": "dotnet",
+		"args": ["build", "EmailSummarizer.Console"],
+		"group": {
+		  "kind": "build"
+		}
+	  },
+	  {
+		"label": "Build EmailSummarizer.Tests",
+		"type": "shell",
+		"command": "dotnet",
+		"args": ["build", "EmailSummarizer.Tests"],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		}
+	  },
+	  {
+		"label": "Run EmailSummarizer.Console",
+		"type": "shell",
+		"command": "dotnet",
+		"args": ["run", "--project", "EmailSummarizer.Console"]
+	  },
+	  {
+		"label": "Test EmailSummarizer.Tests",
+		"type": "shell",
+		"command": "dotnet",
+		"args": ["test", "EmailSummarizer.Tests"]
+	},
+	{
+		"label": "build",
+		"command": "dotnet",
+		"type": "process",
+		"args": [
+			"build",
+			"${workspaceFolder}/EmailSummarizer.sln",
+			"/property:GenerateFullPaths=true",
+			"/consoleloggerparameters:NoSummary;ForceNoAlign"
+		],
+		"problemMatcher": "$msCompile"
+	},
+	{
+		"label": "publish",
+		"command": "dotnet",
+		"type": "process",
+		"args": [
+			"publish",
+			"${workspaceFolder}/EmailSummarizer.sln",
+			"/property:GenerateFullPaths=true",
+			"/consoleloggerparameters:NoSummary;ForceNoAlign"
+		],
+		"problemMatcher": "$msCompile"
+	},
+	{
+		"label": "watch",
+		"command": "dotnet",
+		"type": "process",
+		"args": [
+			"watch",
+			"run",
+			"--project",
+			"${workspaceFolder}/EmailSummarizer.sln"
+		],
+		"problemMatcher": "$msCompile"
+	}
+	]
+  }
+  
