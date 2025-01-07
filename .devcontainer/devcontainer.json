@@ -11,7 +11,9 @@
 	},
 	"mounts": [
         "source=${localEnv:HOME}/Code/Logs,target=/workspaces/Logs,type=bind",
-        "source=${localEnv:HOME}/Code/Data,target=/workspaces/Data,type=bind",
-    ]
-
+        "source=${localEnv:HOME}/Code/Data,target=/workspaces/Data,type=bind"
+    ],
+	"runArgs": [
+		"--env-file",".devcontainer/devcontainer.env"
+	]
 }
