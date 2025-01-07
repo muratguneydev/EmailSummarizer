@@ -476,5 +476,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# EmailSummarizer specific
-#.env
+# EmailSummarizer specific security files
+*.env
+#credentials.json
+#token.json
