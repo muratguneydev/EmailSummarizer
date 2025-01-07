@@ -4,11 +4,11 @@ public class Program
 {
 	public static void Main(string[] args)
 	{
-		var emailAccount = Environment.GetEnvironmentVariable("EMAIL_USER");
-		var emailPassword = Environment.GetEnvironmentVariable("EMAIL_PASSWORD");
-		var senderEmail = Environment.GetEnvironmentVariable("SENDER_EMAIL");
-		var senderPassword = Environment.GetEnvironmentVariable("SENDER_PASSWORD");
-		var receiverEmail = Environment.GetEnvironmentVariable("RECEIVER_EMAIL");
+		var emailAccount = Environment.GetEnvironmentVariable("SOURCE_EMAIL_USER");
+		var emailPassword = Environment.GetEnvironmentVariable("SOURCE_EMAIL_PASSWORD");
+		var senderEmail = Environment.GetEnvironmentVariable("FEEDBACK_SENDER_EMAIL");
+		var senderPassword = Environment.GetEnvironmentVariable("FEEDBACK_SENDER_PASSWORD");
+		var receiverEmail = Environment.GetEnvironmentVariable("FEEDBACK_RECEIVER_EMAIL");
 
 		var emailReader = new ImapEmailReader(emailAccount, emailPassword);
 		var summarizer = new EmailSummarizer();

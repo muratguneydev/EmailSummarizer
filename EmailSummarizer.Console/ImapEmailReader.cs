@@ -42,7 +42,7 @@ public class ImapEmailReader
 		catch (Exception ex)
 		{
 			System.Console.WriteLine($"Error reading emails: {ex.Message}");
-			throw; // Re-throw for testing purposes
+			throw;
 		}
 		return messages;
 	}
