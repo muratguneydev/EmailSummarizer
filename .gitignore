@@ -478,5 +478,6 @@ $RECYCLE.BIN/
 
 # EmailSummarizer specific security files
 *.env
+merged_emails.txt
 #credentials.json
 #token.json
