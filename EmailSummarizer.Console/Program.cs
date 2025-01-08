@@ -12,7 +12,6 @@ public class Program
 
 		var emailReader = new ImapEmailReader(emailAccount, emailPassword);
 		var summarizer = new EmailSummarizer();
-		//var fileUploader = new GoogleDriveUploader();
 
 		try
 		{
@@ -20,11 +19,9 @@ public class Program
 			var mergedText = summarizer.SummarizeEmails(messages);
 			var filePath = "merged_emails.txt";
 			File.WriteAllText(filePath, mergedText);
-			//var fileId = fileUploader.UploadFile(filePath);
 
-			//System.Console.WriteLine($"File uploaded to Google Drive with ID: {fileId}");
-			EmailSender.SendSummaryEmail(mergedText, senderEmail, senderPassword, receiverEmail);
-			System.Console.WriteLine($"File sent to: {receiverEmail}.");
+			//EmailSender.SendSummaryEmail(mergedText, senderEmail, senderPassword, receiverEmail);
+			//System.Console.WriteLine($"File sent to: {receiverEmail}.");
 		}
 		catch (Exception ex)
 		{
