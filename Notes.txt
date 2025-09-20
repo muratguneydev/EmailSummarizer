@@ -4,6 +4,19 @@ TODO
 1. Convert all to async
 2. Warnings as errors
 
+When cloned freshly from github:
+1. Copy devcontainer.env.example into devcontainer.env in the same folder and update details.
+2. Create directories for mounting:
+Windows:
+mkdir "$env:USERPROFILE\Code"
+mkdir "$env:USERPROFILE\Code\Logs"
+mkdir "$env:USERPROFILE\Code\Data"
+linux:
+mkdir "$env:HOME\Code"
+mkdir "$env:HOME\Code\Logs"
+mkdir "$env:HOME\Code\Data"
+3. Replace devcontainer.json with windows or linux version.
+
 =====================
 Gmail authentication:
 =====================
